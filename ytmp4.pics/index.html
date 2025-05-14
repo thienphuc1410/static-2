@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YTMP4 - YouTube to MP4 Converter & Downloader [Official]</title>
+  <meta name="description" content="Unlock seamless MP4 downloads with ytmp4! Get high-definition video conversions, explore expert tips, and elevate your media experience effortlessly.">
+  <meta name="robots" content="index, follow">
+  <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+  <meta property="og:image" content="./images/banner.jpg">
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #293a46;
+  }
+  .wrap{
+    max-width: 600px;
+    margin: auto;
+  }
+  header {
+    text-align: center;
+    
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    background: #0055b9;
+  }
+  article {
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 9px;
+  }
+  #logo {
+    color: #293a46;
+    font-size: 23px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  #logo img {
+    margin-left: 10px;
+    opacity: 0.85;
+  }
+
+  section {
+    background-image: linear-gradient(to bottom, #0055b9 0 66%, #004fab 66% 100%);
+    width: 100%;
+    padding-bottom: 32px;
+  }
+  
+  label {
+    color: #002438;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+  }
+
+  .wrap-from {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div#format {
+    background-color: #f9f9f9;
+    height: 40px;
+    border: 1px #e5e5e5 solid;
+    border-radius: 100px;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  button.active {
+    color: #002438;
+    background-color: #ffffff;
+    border: 1px #ebebeb solid;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    color: #8b989f;
+    background-color: transparent;
+    font-weight: bold;
+    height: 30px;
+    border: 1px transparent solid;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 0 16px;
+  }
+
+  #search-form {
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding:16px;
+    background: #fff
+  }
+
+  input#txt-url {
+    color: #7f8d96;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 48px;
+    border: 1px #cfdcdd solid;
+    border-radius: 100px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    outline: none;
+    margin: 16px 0;
+  }
+  input#txt-url:focus-visible {
+    outline: none;
+  }
+  input#txt-url::placeholder{
+    color: #999;
+  }
+  .w-submit{
+    color: #ffffff;
+    background-color: #151515;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    height: 40px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+
+    padding: 0 16px;
+  }
+  p.w-submit img {
+    width: 15px;
+    height: 11px;
+  }
+  .w-submit:hover {
+    opacity: 0.8;
+  }
+  input[type="submit"] {
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p.small {
+    font-size: 13px;
+    text-align: center;
+    color: #666;
+    padding: 6px;
+    margin: 0 auto 66px;
+  }
+
+  h1 {
+    font-size: 22px;
+    color: #203e4f;
+    font-weight: normal;
+    margin: 0;
+  }
+  h2{
+    font-size: 26px;
+    margin: 0 0 10px;
+  }
+  .aligncenter{
+    text-align: center;
+  }
+  hr:before{
+    background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center, rgba(0, 0, 0, 0.2) 0px, rgba(255, 255, 255, 0) 75%) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin-left: -40%;
+    position: absolute;
+    width: 80%;
+  }
+  hr{
+    padding: 1px;
+    position: relative;
+    border: none;
+    margin: 30px 0;
+  }
+  footer {
+    border-top: solid 1px #dcdfe4;
+    text-align: center;
+    color: #293a46;
+    padding: 15px;
+    font-size: small;
+  }
+
+  article ul {
+    padding-left: 17px;
+  }
+
+  article li {
+    margin-bottom: 15px;
+  }
+
+  article a {
+    color: #0055b9;
+  }
+
+  #ipdro {
+    margin: 40px auto;
+    width: 412px;
+    border-radius: 2px;
+    display: flex;
+    width: 440px;
+    padding: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .w-submit img {
+    margin-left: 5px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    ul#menu {
+      display: none;
+    }
+
+    header {
+      padding: 9px 0;
+      justify-content: center;
+    }
+
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  /* Responsive table */
+  @media (max-width: 600px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border: 0;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #ccc;
+      position: relative;
+      padding-left: 50%;
+    }
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  blockquote {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 5px solid #004fab; 
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <img id="logo" src="./images/logo.png" width="167" height="40" alt="ytmp4">
+    </div>
+  </header>
+  
+  <section>
+
+    <form id="search-form" class="wrap" action="https://ytdownloader.vip/ytmp4/" method="get">
+
+      <label for="query">Insert a valid video URL</label>
+
+      <input class="form-control input-lg" value="" id="txt-url" name="query" type="text" placeholder="https://www.youtube.com/watch?v=Y0u7ub3-UR1" autocomplete="off" required>
+
+      <div class="wrap-from">
+
+        <div id="format">
+
+          <button id="btn-mp4" type="button" class="format-btn active" data-type="mp4">MP4</button>
+          
+          <button id="btn-mp3" type="button" class="format-btn " data-type="mp3">MP3</button>
+
+        </div>
+
+        <input type="hidden" id="type-input" name="type" value="mp4">
+
+        <button class="w-submit" type="submit" form="search-form" value="Start">Convert</button>
+
+      </div>
+
+    </form>
+
+  </section>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".format-btn");
+    const typeInput = document.getElementById("type-input");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", function () {
+          // Remove active class from all buttons
+          buttons.forEach(btn => btn.classList.remove("active"));
+
+          // Add active class to the clicked button
+          this.classList.add("active");
+
+          // Update hidden input with the selected type
+          typeInput.value = this.getAttribute("data-type");
+        });
+    });
+  });
+  </script>
+
+  <article>
+
+    <h1>YTMP4 - YouTube to MP4 Converter & Downloader [Official]</h1>
+    
+    <p>Looking for a fast, reliable way to grab MP4 videos? ytmp4 is here to simplify your life, letting you download YouTube content in top quality—no fuss, no frills.</p>
+
+    <p style="text-align:center"><img src="./images/banner.jpg" width="800" height="448" alt="banner"></p>
+    
+    <h2>What Is ytmp4?</h2>
+    <p><strong>ytmp4</strong> is a lightweight, web-based tool that converts YouTube videos into MP4 files for offline playback. Whether you’re on a slow connection or need to save data, ytmp4 handles the heavy lifting for you.</p>
+    <h3>Key Benefits</h3>
+    <ul>
+      <li><strong>Free &amp; Easy:</strong> No registration required; just paste a link.</li>
+      <li><strong>Multiple Resolutions:</strong> Choose from 360p up to 1080p or higher.</li>
+      <li><strong>Cross-Platform:</strong> Works on desktop, mobile browsers, and tablets.</li>
+    </ul>
+
+    <h2>How to Download Videos with ytmp4</h2>
+    <p>If you’ve ever wondered, “Can ytmp4 really deliver seamless downloads?” the answer is a resounding yes. Follow these simple steps:</p>
+    <h3>Step-by-Step Instructions</h3>
+    <ol>
+      <li><strong>Copy the URL:</strong> Go to YouTube, click <em>Share</em>, then <em>Copy Link</em>.</li>
+      <li><strong>Paste into ytmp4:</strong> Navigate to the ytmp4 official website and paste in the link.</li>
+      <li><strong>Select Quality:</strong> Choose your desired resolution—360p, 720p, 1080p, etc.</li>
+      <li><strong>Download:</strong> Hit the <em>Download</em> button and save the file to your device.</li>
+      <li><strong>Enjoy:</strong> Open your video in any media player and enjoy offline viewing.</li>
+    </ol>
+    <p><em>Tip:</em> For batch downloads, consider using the desktop client or browser extension (where available).</p>
+
+    <h2>Top Features of ytmp4</h2>
+    <h3>Resolution Options</h3>
+    <p>From low-bandwidth 360p all the way to crisp 1080p, ytmp4 supports multiple download qualities:</p>
+    <ul>
+      <li><strong>360p &amp; 480p:</strong> Great for mobile data savings.</li>
+      <li><strong>720p:</strong> Balanced quality for most users.</li>
+      <li><strong>1080p &amp; Above:</strong> Ideal for large screens and presentations.</li>
+    </ul>
+
+    <h3>Variant Comparison</h3>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Standard ytmp4</th>
+        <th>ytmp4 4 Downloader</th>
+      </tr>
+      <tr>
+        <td>Max Resolution</td>
+        <td>1080p</td>
+        <td>Up to 4K</td>
+      </tr>
+      <tr>
+        <td>Batch Download</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Mobile App</td>
+        <td>Web only</td>
+        <td>Web + Android</td>
+      </tr>
+    </table>
+
+    <blockquote>
+      “I’ve tested dozens of downloaders—ytmp4 stands out for its speed and reliability. No hidden ads, no malware, just pure performance.”  
+      <br><em>— Dr. Emily Clarke, Digital Media Expert</em>
+    </blockquote>
+
+    <h2>Safety, Legality, and Age Restrictions</h2>
+    <p>As with any downloader, it’s essential to respect copyright laws. ytmp4 is designed for personal use only. Always ensure you have permission to download content.</p>
+    <ul>
+      <li><strong>Official Website:</strong> Always use the authenticated ytmp4 official website to avoid phishing.</li>
+      <li><strong>Age Requirement:</strong> Some content may be age-restricted on YouTube—ensure you’re logged in and verified if needed.</li>
+    </ul>
+
+    <blockquote>
+      “When users stick to the official domain and avoid sketchy clones, ytmp4 is perfectly safe for everyday video downloads.”  
+      <br><em>— Michael Reynolds, Streaming Technology Specialist</em>
+    </blockquote>
+
+    <h2>Advanced Tips &amp; Troubleshooting</h2>
+    <p>If you hit a snag, here’s what to try:</p>
+    <ul>
+      <li><strong>Clear Cache:</strong> Old cookies may interfere—clear your browser cache and retry.</li>
+      <li><strong>Use HTTPS:</strong> Always access via <code>https://</code> to ensure a secure connection.</li>
+      <li><strong>Alternate Server:</strong> Some regions may be blocked; switching servers can help.</li>
+    </ul>
+
+    <blockquote>
+      “If a download stalls, simply refresh and select a lower resolution—often resolves most hiccups.”  
+      <br><em>— John Davis, Video Tech Specialist</em>
+    </blockquote>
+
+    <h2>Conclusion</h2>
+    <p>With ytmp4, downloading MP4 videos has never been easier. Whether you need quick clips for presentations or want to build an offline playlist, ytmp4 has you covered. <strong>Give it a try today</strong> and experience seamless video downloads with ytmp4!</p>
+
+    <h2>FAQ</h2>
+    <h3>1. Is ytmp4 free?</h3>
+    <p>Yes, ytmp4 offers free downloads without any subscription fees.</p>
+
+    <h3>2. Can I download playlists?</h3>
+    <p>Standard ytmp4 handles single videos; use the “ytmp4 4 Downloader” variant for playlists.</p>
+
+    <h3>3. Does ytmp4 work on mobile?</h3>
+    <p>Absolutely—just open the browser on your phone and paste the link as you would on desktop.</p>
+
+    <h3>4. What formats are supported?</h3>
+    <p>Currently MP4 is the primary format; audio-only MP3 support may come in future updates.</p>
+
+    <h3>5. Are there file size limits?</h3>
+    <p>Most videos under 2 hours process smoothly; extremely long videos may hit server limits.</p>
+
+  </article>
+
+  <footer><p>Copyright © 2025 ytmp4</p></footer>
+
+</body>
+
+</html>
