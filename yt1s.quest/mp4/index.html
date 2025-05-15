@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yt1s MP4 - YouTube to MP4 Converter</title>
+  <meta name="description" content="Convert and download your favorite YouTube videos to MP3 effortlessly with yt1s MP3. Experience high-quality audio downloads, fast conversion speeds, and a user-friendly interface.">
+  <meta name="robots" content="index, follow">
+  <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+  <meta property="og:image" content="../images/banner.jpg">
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  body {
+    font-family: "Open Sans",sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #293a46;
+  }
+  header {
+    text-align: center;
+    max-width: 890px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
+  }
+  article {
+    max-width: 890px;
+    margin: auto;
+    padding: 30px 7.5px;
+    box-sizing: border-box;
+  }
+
+  ul#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  ul#menu li a:hover {
+    color: #f20a51;
+  }
+
+  ul#menu li.active a {
+    border-bottom: solid #f20a51;
+  }
+
+  ul#menu li a {
+    padding: 24px 10px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #4a474c;
+    font-weight: 500;
+    display: block;
+    margin: 0 15px;
+  }
+
+  #logo {
+    color: #f20a51;
+    font-size: 23px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  #logo img {
+    margin-right: 10px;
+  }
+
+  section {
+    max-width: 890px;
+    margin: 0 auto;
+    background: #fff;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  #search-form {
+    border-radius: 4px;
+    max-width: 680px;
+    margin: 36px auto 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input#txt-url {
+    width: calc(100% - 120px);
+    padding: 0 14px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px solid #ffc4c4;
+    border-radius: 12px;
+  }
+  input#txt-url:focus-visible {
+    outline: none;
+  }
+  input#txt-url::placeholder{
+    color: #999;
+  }
+  .w-submit{
+    background: #f20a51;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 86, 63, .4);
+    box-sizing: border-box;
+    margin: 0;
+    display: flex
+    ;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    border: none;
+    color: #fff;
+    margin-left: 10px;
+    padding: 18px 40px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  p.w-submit img {
+    width: 15px;
+    height: 11px;
+  }
+  .w-submit:hover {
+    background: #4a474c;
+    box-shadow: none;
+  }
+  input[type="submit"] {
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p.small {
+    font-size: 13px;
+    text-align: center;
+    color: #666;
+    padding: 6px;
+    margin: 0 auto 66px;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #4a474c;
+    margin: 30px 0 0;
+  }
+  p.sub {
+    text-align: center;
+    margin-top: 5px;
+  }
+  h2{
+    font-size: 26px;
+    margin: 0 0 10px;
+  }
+  .aligncenter{
+    text-align: center;
+  }
+  hr:before{
+    background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center, rgba(0, 0, 0, 0.2) 0px, rgba(255, 255, 255, 0) 75%) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin-left: -40%;
+    position: absolute;
+    width: 80%;
+  }
+  hr{
+    padding: 1px;
+    position: relative;
+    border: none;
+    margin: 30px 0;
+  }
+  footer {
+    border-top: solid 1px #dcdfe4;
+    text-align: center;
+    color: #293a46;
+    padding: 15px;
+    font-size: small;
+  }
+
+  article ul {
+    padding-left: 17px;
+  }
+
+  article li {
+    margin-bottom: 15px;
+  }
+  article a {
+    color: #d1181e;
+    font-weight: bold;
+  }
+
+  #ipdro {
+    margin: 40px auto;
+    width: 412px;
+    border-radius: 2px;
+    display: flex;
+    width: 440px;
+    padding: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .w-submit img {
+    margin-left: 5px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    ul#menu {
+      display: none;
+    }
+
+    header {
+      padding: 9px 0;
+      justify-content: center;
+    }
+
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  /* Responsive table */
+  @media (max-width: 600px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border: 0;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #ccc;
+      position: relative;
+      padding-left: 50%;
+    }
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  blockquote {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 5px solid #d1181e; 
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  nav {
+    border-top: solid 1px #dfdfdf;
+    border-bottom: solid 1px #dfdfdf;
+  }
+  </style>
+
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <img src="../images/icon.png" width="37" height="28" alt="logo">yt1s.net.im
+    </div>
+  </header>
+  <nav>
+    <ul id="menu">
+      <li><a href="../">Youtube Downloader</a></li>
+      <li><a href="../mp3">Convert YouTube to MP3</a></li>
+      <li class="active"><a href="../">Youtube to MP4 Converter</a></li>
+    </ul>
+  </nav>
+
+  <h1>YouTube to MP4 Converter</h1>
+  <p class="sub">Effortlessly convert and download YouTube videos to MP4 format for free in high-definition quality.</p>
+  <form id="search-form" action="https://flixs.my/yt1s" method="get">
+    <input class="form-control input-lg" value="" id="txt-url" name="query" type="text" placeholder="Search or paste link here..." autocomplete="off" required>
+    <button class="w-submit" type="submit" form="search-form" value="Start">Convert</button>
+    <input type="hidden" id="type-input" name="type" value="mp4">
+  </form>
+  <p class="small">By using our service you are accepting our Terms of Use.</p>
+
+  <article>
+   <p>Want to download YouTube videos in high-quality MP4 format quickly and effortlessly? yt1s MP4 is your ideal solution. Whether you're a video enthusiast or a content creator, yt1s MP4 provides exceptional features that streamline the conversion process.</p>
+  
+  <h2>What is yt1s MP4?</h2>
+  <p>yt1s MP4 is a dedicated online tool designed to convert YouTube videos into MP4 video files. It distinguishes itself with rapid conversion speeds, superior video quality, and an intuitive interface, making it accessible for users of all experience levels.</p>
+  
+  <h3>Key Features of yt1s MP4</h3>
+  <ul>
+    <li>High-definition MP4 conversions up to 4K resolution.</li>
+    <li>Fast and reliable conversion process.</li>
+    <li>Supports batch conversions for multiple videos simultaneously.</li>
+    <li>Completely free with no hidden charges.</li>
+  </ul>
+  
+  <blockquote>
+    "yt1s MP4 has transformed the way I download videos. The quality is outstanding, and the process is incredibly smooth." – Sarah Mitchell, Video Content Creator
+  </blockquote>
+  
+  <h2>yt1s MP4 vs. Other MP4 Converters</h2>
+  
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>yt1s MP4</th>
+      <th>Y2Mate</th>
+      <th>OnlineVideoConverter</th>
+    </tr>
+    <tr>
+      <td>Video Quality</td>
+      <td>Up to 4K</td>
+      <td>Up to 1080p</td>
+      <td>Up to 720p</td>
+    </tr>
+    <tr>
+      <td>Conversion Speed</td>
+      <td>Fast</td>
+      <td>Moderate</td>
+      <td>Slow</td>
+    </tr>
+    <tr>
+      <td>User Interface</td>
+      <td>Modern and intuitive</td>
+      <td>Simple but outdated</td>
+      <td>Cluttered</td>
+    </tr>
+    <tr>
+      <td>Batch Conversion</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Limited</td>
+    </tr>
+  </table>
+  
+  <h3>Why Choose yt1s MP4?</h3>
+  <ol>
+    <li><strong>Superior Video Quality:</strong> Enjoy high-definition videos up to 4K resolution for the best viewing experience.</li>
+    <li><strong>Speed:</strong> Benefit from faster conversion times, allowing you to download videos quickly.</li>
+    <li><strong>Ease of Use:</strong> Its user-friendly interface makes converting videos simple, even for beginners.</li>
+  </ol>
+  
+  <blockquote>
+    "The video quality and speed of yt1s MP4 conversions are unparalleled. It's my go-to tool for all my video downloading needs." – David Lee, Filmmaker
+  </blockquote>
+  
+  <h2>How to Convert YouTube Videos to MP4 with yt1s MP4</h2>
+  
+  <p>Converting YouTube videos to MP4 using yt1s MP4 is straightforward and efficient. Follow these easy steps to obtain your favorite video files:</p>
+  
+  <ol>
+    <li>Visit the <a href="https://yt1s.net.im/mp4">yt1s MP4 website</a>.</li>
+    <li>Copy the URL of the YouTube video you want to convert.</li>
+    <li>Paste the URL into the designated field on yt1s MP4.</li>
+    <li>Select your desired MP4 resolution from the available options.</li>
+    <li>Click the "Convert" button and wait for the process to complete.</li>
+    <li>Download your converted MP4 file and enjoy your video!</li>
+  </ol>
+  
+  <h2>Frequently Asked Questions</h2>
+  
+  <h3>Is yt1s MP4 free to use?</h3>
+  <p>Yes, yt1s MP4 is completely free with no hidden fees or subscription costs.</p>
+  
+  <h3>What video resolutions does yt1s MP4 support?</h3>
+  <p>yt1s MP4 supports a wide range of resolutions, including 720p, 1080p, and up to 4K for high-definition video quality.</p>
+  
+  <h3>Can I convert multiple videos at once?</h3>
+  <p>Absolutely! yt1s MP4 offers batch conversion, allowing you to convert several YouTube videos simultaneously.</p>
+  
+  <h3>Is yt1s MP4 safe to use?</h3>
+  <p>Yes, yt1s MP4 ensures a secure conversion process without any malware or intrusive advertisements.</p>
+  
+  <h3>Do I need to register to use yt1s MP4?</h3>
+  <p>No registration is required. You can use yt1s MP4 without creating an account.</p>
+  
+  <h2>Conclusion</h2>
+  <p>yt1s MP4 stands out as the leading tool for converting YouTube videos to high-quality MP4 files. Its combination of superior video quality, rapid conversion speeds, and a user-friendly interface makes it a better choice compared to other MP4 converters like Y2Mate and OnlineVideoConverter. Whether you're downloading videos for personal use or professional projects, yt1s MP4 provides a reliable and efficient solution to meet all your video conversion needs.</p>
+
+  </article>
+
+<footer><p>Copyright © 2025 yt1s.net.im</p></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yt1s MP3 - YouTube to MP3 Converter</title>
+  <meta name="description" content="Convert and download your favorite YouTube videos to MP3 effortlessly with yt1s MP3. Experience high-quality audio downloads, fast conversion speeds, and a user-friendly interface.">
+  <meta name="robots" content="index, follow">
+  <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+  <meta property="og:image" content="../images/banner.jpg">
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  body {
+    font-family: "Open Sans",sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #293a46;
+  }
+  header {
+    text-align: center;
+    max-width: 890px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 6px 0;
+  }
+  article {
+    max-width: 890px;
+    margin: auto;
+    padding: 30px 7.5px;
+    box-sizing: border-box;
+  }
+
+  ul#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  ul#menu li a:hover {
+    color: #f20a51;
+  }
+
+  ul#menu li.active a {
+    border-bottom: solid #f20a51;
+  }
+
+  ul#menu li a {
+    padding: 24px 10px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #4a474c;
+    font-weight: 500;
+    display: block;
+    margin: 0 15px;
+  }
+
+  #logo {
+    color: #f20a51;
+    font-size: 23px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  #logo img {
+    margin-right: 10px;
+  }
+
+  section {
+    max-width: 890px;
+    margin: 0 auto;
+    background: #fff;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  #search-form {
+    border-radius: 4px;
+    max-width: 680px;
+    margin: 36px auto 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input#txt-url {
+    width: calc(100% - 120px);
+    padding: 0 14px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px solid #ffc4c4;
+    border-radius: 12px;
+  }
+  input#txt-url:focus-visible {
+    outline: none;
+  }
+  input#txt-url::placeholder{
+    color: #999;
+  }
+  .w-submit{
+    background: #f20a51;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 86, 63, .4);
+    box-sizing: border-box;
+    margin: 0;
+    display: flex
+    ;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    border: none;
+    color: #fff;
+    margin-left: 10px;
+    padding: 18px 40px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  p.w-submit img {
+    width: 15px;
+    height: 11px;
+  }
+  .w-submit:hover {
+    background: #4a474c;
+    box-shadow: none;
+  }
+  input[type="submit"] {
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p.small {
+    font-size: 13px;
+    text-align: center;
+    color: #666;
+    padding: 6px;
+    margin: 0 auto 66px;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #4a474c;
+    margin: 30px 0 0;
+  }
+  p.sub {
+    text-align: center;
+    margin-top: 5px;
+  }
+  h2{
+    font-size: 26px;
+    margin: 0 0 10px;
+  }
+  .aligncenter{
+    text-align: center;
+  }
+  hr:before{
+    background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center, rgba(0, 0, 0, 0.2) 0px, rgba(255, 255, 255, 0) 75%) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin-left: -40%;
+    position: absolute;
+    width: 80%;
+  }
+  hr{
+    padding: 1px;
+    position: relative;
+    border: none;
+    margin: 30px 0;
+  }
+  footer {
+    border-top: solid 1px #dcdfe4;
+    text-align: center;
+    color: #293a46;
+    padding: 15px;
+    font-size: small;
+  }
+
+  article ul {
+    padding-left: 17px;
+  }
+
+  article li {
+    margin-bottom: 15px;
+  }
+  article a {
+    color: #d1181e;
+    font-weight: bold;
+  }
+
+  #ipdro {
+    margin: 40px auto;
+    width: 412px;
+    border-radius: 2px;
+    display: flex;
+    width: 440px;
+    padding: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .w-submit img {
+    margin-left: 5px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    ul#menu {
+      display: none;
+    }
+
+    header {
+      padding: 9px 0;
+      justify-content: center;
+    }
+
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  /* Responsive table */
+  @media (max-width: 600px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border: 0;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #ccc;
+      position: relative;
+      padding-left: 50%;
+    }
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  blockquote {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 5px solid #d1181e; 
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  nav {
+    border-top: solid 1px #dfdfdf;
+    border-bottom: solid 1px #dfdfdf;
+  }
+  </style>
+
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <img src="../images/icon.png" width="37" height="28" alt="logo">yt1s.net.im
+    </div>
+  </header>
+  <nav>
+    <ul id="menu">
+      <li><a href="../">Youtube Downloader</a></li>
+      <li class="active"><a href="./">Convert YouTube to MP3</a></li>
+      <li><a href="../mp4">Youtube to MP4 Converter</a></li>
+    </ul>
+  </nav>
+
+  <h1>Convert YouTube Videos to MP3</h1>
+  <p class="sub">Easily convert and download YouTube videos to MP3 format for free, in high quality</p>
+  <form id="search-form" action="https://flixs.my/yt1s" method="get">
+    <input class="form-control input-lg" value="" id="txt-url" name="query" type="text" placeholder="Search or paste link here..." autocomplete="off" required>
+    <button class="w-submit" type="submit" form="search-form" value="Start">Convert</button>
+    <input type="hidden" id="type-input" name="type" value="mp3">
+  </form>
+  <p class="small">By using our service you are accepting our Terms of Use.</p>
+
+  <article>
+    <p>Looking to convert YouTube videos to high-quality MP3 files quickly and easily? yt1s MP3 is the perfect solution for your audio conversion needs. Whether you're a music enthusiast or a content creator, yt1s MP3 offers unmatched features that simplify the conversion process.</p>
+  
+  <h2>What is yt1s MP3?</h2>
+  <p>yt1s MP3 is a specialized online tool designed to convert YouTube videos into MP3 audio files. It stands out for its fast conversion speeds, high-quality output, and intuitive interface, making it accessible for users of all levels.</p>
+  
+  <h3>Key Features of yt1s MP3</h3>
+  <ul>
+    <li>High-quality MP3 conversions up to 320 kbps.</li>
+    <li>Fast and efficient conversion process.</li>
+    <li>Supports batch conversions for multiple videos at once.</li>
+    <li>Completely free with no hidden fees.</li>
+  </ul>
+  
+  <blockquote>
+    "yt1s MP3 has made it incredibly easy to create my own music library. The quality is top-notch and the process is seamless." – Jamie Rivera, Music Producer
+  </blockquote>
+  
+  <h2>yt1s MP3 vs. Other MP3 Converters</h2>
+  
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>yt1s MP3</th>
+      <th>Y2Mate</th>
+      <th>OnlineVideoConverter</th>
+    </tr>
+    <tr>
+      <td>MP3 Quality</td>
+      <td>Up to 320 kbps</td>
+      <td>Up to 256 kbps</td>
+      <td>Up to 192 kbps</td>
+    </tr>
+    <tr>
+      <td>Conversion Speed</td>
+      <td>Fast</td>
+      <td>Moderate</td>
+      <td>Slow</td>
+    </tr>
+    <tr>
+      <td>User Interface</td>
+      <td>Modern and user-friendly</td>
+      <td>Simple but cluttered</td>
+      <td>Outdated design</td>
+    </tr>
+    <tr>
+      <td>Batch Conversion</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Limited</td>
+    </tr>
+  </table>
+  
+  <h3>Why Choose yt1s MP3?</h3>
+  <ol>
+    <li><strong>Superior Audio Quality:</strong> Enjoy crystal-clear MP3 files with bitrate options up to 320 kbps.</li>
+    <li><strong>Speed:</strong> Experience faster conversions, saving you time and enhancing productivity.</li>
+    <li><strong>Ease of Use:</strong> Its intuitive interface allows users to convert videos with just a few clicks.</li>
+  </ol>
+  
+  <blockquote>
+    "The quality and speed of yt1s MP3 conversions are unmatched. It's my preferred tool for all audio conversions." – Liam Chen, Audio Engineer
+  </blockquote>
+  
+  <h2>How to Convert YouTube Videos to MP3 with yt1s MP3</h2>
+  
+  <p>Converting YouTube videos to MP3 using yt1s MP3 is simple and straightforward. Follow these easy steps to get your favorite audio files:</p>
+  
+  <ol>
+    <li>Go to the <a href="https://yt1s.net.im/mp3">yt1s MP3 website</a>.</li>
+    <li>Copy the URL of the YouTube video you want to convert.</li>
+    <li>Paste the URL into the designated field on yt1s MP3.</li>
+    <li>Select your desired MP3 quality from the available options.</li>
+    <li>Click the "Convert" button and wait for the process to complete.</li>
+    <li>Download your converted MP3 file and enjoy!</li>
+  </ol>
+  
+  <h2>Frequently Asked Questions</h2>
+  
+  <h3>Is yt1s MP3 free to use?</h3>
+  <p>Yes, yt1s MP3 is completely free with no hidden charges or subscription fees.</p>
+  
+  <h3>What MP3 quality does yt1s MP3 support?</h3>
+  <p>yt1s MP3 supports MP3 conversions up to 320 kbps, ensuring high-quality audio output.</p>
+  
+  <h3>Can I convert multiple videos at once?</h3>
+  <p>Absolutely! yt1s MP3 offers batch conversion, allowing you to convert multiple YouTube videos simultaneously.</p>
+  
+  <h3>Is yt1s MP3 safe to use?</h3>
+  <p>Yes, yt1s MP3 ensures a secure conversion process without any malware or intrusive ads.</p>
+  
+  <h3>Do I need to register to use yt1s MP3?</h3>
+  <p>No registration is required. You can use yt1s MP3 without creating an account.</p>
+  
+  <h2>Conclusion</h2>
+  <p>yt1s MP3 is the ultimate tool for converting YouTube videos to high-quality MP3 files. Its combination of superior audio quality, fast conversion speeds, and user-friendly interface sets it apart from other MP3 converters like Y2Mate and OnlineVideoConverter. Whether you're building a personal music library or need audio files for your projects, yt1s MP3 provides a reliable and efficient solution to meet your needs.</p>
+
+  </article>
+
+<footer><p>Copyright © 2025 yt1s.net.im</p></footer>
+
+</body>
+
+</html>
