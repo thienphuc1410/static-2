@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveFrom - Free Online Video Downloader | SaveItFrom.com</title>
+  <meta name="description" content="SaveFrom.net is a free online tool to download videos from YouTube, Facebook, Instagram, and more. Learn how to use it safely and explore alternatives.">
+  <meta name="robots" content="index, follow">
+  <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+  <meta property="og:image" content="./images/banner.jpg">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #293a46;
+  }
+  header {
+    text-align: center;
+    max-width: 970px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px 0 13px;
+  }
+  article {
+    max-width: 970px;
+    margin: auto;
+    padding: 30px 7.5px;
+    box-sizing: border-box;
+  }
+
+  ul#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  ul#menu li {
+    font-family: Open Sans, Arial, sans-serif;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #293a46;
+    cursor: pointer;
+    color: #333;
+    font-weight: 400;
+  }
+
+  ul#menu li:hover {
+    background: #eee;
+    color: #c10841;
+  }
+
+  ul#menu li:hover, ul#menu li.active {
+    border-bottom: solid 2px #1f8cff;
+  }
+
+  #logo {
+    color: #293a46;
+    font-size: 23px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: auto;
+  }
+
+  #logo img {
+    margin-left: 10px;
+    opacity: 0.85;
+  }
+
+  section {
+    max-width: 970px;
+    margin: 0 auto;
+    background: #fff;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  #search-form,#option-select {
+    border-radius: 4px;
+    max-width: 650px;
+    margin: 36px auto 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input#txt-url {
+    width: calc(100% - 120px);
+    padding: 0 14px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: solid 5px #7ed214;
+    margin-right: 5px;
+  }
+  input#txt-url:focus-visible {
+    outline: none;
+  }
+  input#txt-url::placeholder{
+    color: #999;
+  }
+  .w-submit{
+    background: #7ed214;
+    cursor: pointer;
+    height: 50px;
+    width: 120px;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  p.w-submit img {
+    width: 15px;
+    height: 11px;
+  }
+  .w-submit:hover {
+    opacity: 0.8;
+  }
+  input[type="submit"] {
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  p.small {
+    font-size: 13px;
+    text-align: center;
+    color: #666;
+    padding: 6px;
+    margin: 0 auto 66px;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 44px;
+    padding-bottom: 33px;
+  }
+  h2{
+    font-size: 26px;
+    margin: 0 0 10px;
+  }
+  .aligncenter{
+    text-align: center;
+  }
+  hr:before{
+    background: rgba(0, 0, 0, 0) radial-gradient(ellipse at center center, rgba(0, 0, 0, 0.2) 0px, rgba(255, 255, 255, 0) 75%) repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin-left: -40%;
+    position: absolute;
+    width: 80%;
+  }
+  hr{
+    padding: 1px;
+    position: relative;
+    border: none;
+    margin: 30px 0;
+  }
+  footer {
+    border-top: solid 1px #dcdfe4;
+    text-align: center;
+    color: #293a46;
+    padding: 15px;
+    font-size: small;
+  }
+
+  article ul {
+    padding-left: 17px;
+  }
+
+  article li {
+    margin-bottom: 15px;
+  }
+
+  article a {
+    color: #fede55;
+  }
+
+  #ipdro {
+    margin: 40px auto;
+    width: 412px;
+    border-radius: 2px;
+    display: flex;
+    width: 440px;
+    padding: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .w-submit img {
+    margin-left: 5px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    ul#menu {
+      display: none;
+    }
+
+    header {
+      padding: 9px 0;
+      justify-content: center;
+    }
+
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  /* Responsive table */
+  @media (max-width: 600px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border: 0;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #ccc;
+      position: relative;
+      padding-left: 50%;
+    }
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  blockquote {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 5px solid #d1181e; 
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  a.button-op {
+    text-decoration: none;
+    padding: 10px 21px;
+    background: #ff0000;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    opacity: 0.5;
+  }
+
+  #option-select {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+
+  a.button-op.facebook {
+    background: #0866ff;
+  }
+
+  a.active.button-op {
+    opacity: 1;
+  }
+
+  a.button-op:hover {
+    opacity: 1;
+  }
+  #menu a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li.bulr {
+    opacity: 0.3;
+  }
+  </style>
+
+</head>
+<body>
+  <header>
+    <div id="logo">
+     <a href="https://savefrom.com.de/"><img src="./images/savefrom.com.im.png" width="206" height="40" alt="savefrom"></a>
+   </div>
+
+   <ul id="menu">
+    <li class="active"><a href="https://savefrom.com.de/">YouTube</a></li>
+    <li><a href="https://fb.savefrom.com.de/">Facebook</a></li>
+    <li class="bulr">Instagram</li>
+    <li class="bulr">Twitter</li>
+    <li class="bulr">TikTok</li>
+    <li class="bulr">How to</li>
+    <li class="bulr">Install</li>
+  </ul>
+
+</header>
+
+<h1>SaveFrom - Free Online Video Downloader | SaveItFrom.com</h1>
+<form id="search-form" action="https://ytdownloader.vip/savefrom/" method="get">
+  <input class="form-control input-lg" value="" id="txt-url" name="query" type="text" placeholder="Search or paste link here..." autocomplete="off" required>
+  <button class="w-submit" type="submit" form="search-form" value="Start">Download</button>
+</form>
+<div id="option-select">
+  <a href="https://savefrom.com.de/" class="active button-op youtube">Youtube Downloader</a>
+  <a href="https://fb.savefrom.com.de/" class="button-op facebook">Facebook Downloader</a>
+</div>
+<p class="small">By using our service you accept our Terms of Service and Privacy Policy.</p>
+
+<article>
+
+  <p>SaveFrom.net is a popular online tool that allows users to download videos from various platforms like YouTube, Facebook, Instagram, and more. With its simple interface and broad compatibility, it's a go-to solution for many looking to save videos for offline viewing.
+
+    <p style="text-align:center"><img src="./images/banner.jpg" width="800" height="448" alt="banner"></p>
+
+    <h2>What is SaveFrom.net?</h2>
+
+    <p>SaveFrom.net is a web-based service that enables users to download videos by simply entering the video's URL. It supports multiple platforms, including:</p>
+
+    <ul>
+      <li>YouTube</li>
+      <li>Facebook</li>
+      <li>Instagram</li>
+      <li>Twitter</li>
+      <li>Vimeo</li>
+      <li>Dailymotion</li>
+    </ul>
+
+    <p>Users can choose the video quality and format before downloading, making it a versatile tool for various needs.
+
+      <h2>How to Use SaveFrom.net</h2>
+
+      <ol>
+        <li>Copy the URL of the video you want to download.</li>
+        <li>Go to <a href="https://savefrom.com.im/">savefrom.com.im</a>.</li>
+        <li>Paste the URL into the input field.</li>
+        <li>Click the download button.</li>
+        <li>Choose the desired format and quality.</li>
+        <li>Click to download the video to your device.</li>
+      </ol>
+
+      <h2>Is SaveFrom.net Safe to Use?</h2>
+
+      <blockquote>
+        "While SaveFrom.net is a convenient tool, users should be cautious. Some reports suggest potential security risks, especially when downloading additional software or browser extensions."
+      </blockquote>
+
+      <p>It's advisable to use the web-based version without installing any additional software. Always ensure your antivirus software is up to date when downloading files from the internet.
+
+        <h2>SaveFrom.net Alternatives</h2>
+
+        <p>If you're looking for alternatives to SaveFrom.net, consider the following options:</p>
+
+        <ul>
+          <li><strong>SnapInsta:</strong> An Instagram downloader for photos, videos, reels, and stories.</li>
+          <li><strong>FDown.net:</strong> A Facebook video downloader that allows saving videos directly from Facebook.</li>
+          <li><strong>SSSTik:</strong> A TikTok video downloader that enables downloading videos without watermarks.</li>
+          <li><strong>All Video Downloader:</strong> An app that supports downloading videos from various social media platforms.</li>
+        </ul>
+
+        <h2>Tips for Safe Video Downloading</h2>
+
+        <ul>
+          <li>Avoid downloading and installing unknown software.</li>
+          <li>Use reputable antivirus programs to scan downloaded files.</li>
+          <li>Be cautious of pop-up ads and redirects.</li>
+          <li>Always respect copyright laws and terms of service of content platforms.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+
+        <p>SaveFrom.net offers a straightforward solution for downloading videos from various platforms. While it's a handy tool, users should exercise caution and be aware of potential security risks. Exploring alternatives and following safe downloading practices can enhance your experience and protect your devices.
+
+          <h2>Frequently Asked Questions (FAQ)</h2>
+
+          <h3>Can I use SaveFrom.net on my mobile device?</h3>
+          <p>Yes, SaveFrom.net is accessible via mobile browsers, allowing you to download videos directly to your smartphone or tablet.
+
+            <h3>Do I need to install any software to use SaveFrom.net?</h3>
+            <p>No, the web-based version doesn't require any installations. However, be cautious if prompted to download additional software.
+
+              <h3>Is it legal to download videos using SaveFrom.net?</h3>
+              <p>Downloading videos may violate the terms of service of some platforms. Ensure you have the right to download and use the content.
+
+                <h3>Does SaveFrom.net support HD video downloads?</h3>
+                <p>Yes, SaveFrom.net allows users to choose the video quality, including HD options, depending on the source video's availability.
+
+                  <h3>Are there browser extensions for SaveFrom.net?</h3>
+                  <p>Yes, but users should be cautious when installing browser extensions due to potential security risks.
+
+
+                  </article>
+
+                  <footer><p>Copyright © 2025 SaveFrom</p></footer>
+
+                </body>
+
+                </html>
